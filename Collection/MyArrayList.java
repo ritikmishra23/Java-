@@ -5,6 +5,7 @@ Reduces the effort of writing complex data structure logic manually. */
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 class MyArrayList {
     public static void main(String args[]) {
@@ -42,6 +43,18 @@ class MyArrayList {
         list2.clear();
         System.out.println(list2);
         System.out.println(list.contains(18));// check whether value is present or not
+
+        // Accessing ways of each element of list
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i));
+        }
+        for (Integer elemen : list)
+            System.out.print("For each element is:" + elemen);
+
+        // using iterator
+        Iterator<Integer> it = list.iterator();
+        while (it.hasNext())
+            System.out.println(it.next());
 
     }
 }
